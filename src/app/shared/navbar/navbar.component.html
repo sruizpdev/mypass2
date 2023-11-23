@@ -1,6 +1,9 @@
+@if (userService.isLogged()) {
+
 <ul class="nav justify-content-center">
   <li class="nav-item"><a class="nav-link" routerLink="home">Inicio</a></li>
   <li class="nav-item"><a class="nav-link" routerLink="new">Nuevo</a></li>
   <li class="nav-item"><a class="nav-link" routerLink="edit">Editar</a></li>
   <li class="nav-item"><a class="nav-link" (click)="logout()">Salir</a></li>
 </ul>
+}
