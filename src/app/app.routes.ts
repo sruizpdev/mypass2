@@ -10,5 +10,6 @@ export const routes: Routes = [
   { path: 'new', component: NewComponent, canActivate: [authGuard] },
   { path: 'edit', component: EditComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent },
+  
   { path: '**', redirectTo: 'home' },
 ];

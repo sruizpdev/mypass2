@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { UserService } from '../../user.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +13,7 @@ import { UserService } from '../../user.service';
 })
 export class NavbarComponent {
   router = inject(Router);
-  userService = inject(UserService);
+  
   logout() {
     localStorage.removeItem('user');
     this.router.navigate(['login']);

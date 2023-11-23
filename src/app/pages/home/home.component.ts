@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NavbarComponent } from '../../shared/navbar/navbar.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,
+    CommonModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'mypass2';
+
+  userService = inject(UserService);
 }
