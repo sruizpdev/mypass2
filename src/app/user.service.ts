@@ -9,7 +9,7 @@ export class UserService {
   constructor() {}
   router = inject(Router);
 
-  //todo: hay que evitar este tipo any
+  //todo: hay que evitar este tipo 'any'
 
   login(user: any) {
     if (user.email == 'sergiotto@outlook.com' && user.password == '12345') {
