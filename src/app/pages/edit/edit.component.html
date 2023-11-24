@@ -1,2 +1,61 @@
-
-<p>edit works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="text-center">Editando</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+            <div class="m-3">
+              <label for="site" class="form-label">Sitio / App</label>
+              <input
+                type="text"
+                id="site"
+                name="site"
+                formControlName="site"
+                class="form-control"
+                placeholder="Ingrese el sitio web o app"
+                required
+              />
+            </div>
+            <div class="m-3">
+              <label for="username" class="form-label">Usuario</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                formControlName="username"
+                class="form-control"
+                placeholder="Ingrese el nombre de usuario"
+                required
+              />
+            </div>
+            <div class="m-3">
+              <label for="site" class="form-label">Password</label>
+              <input
+                type="text"
+                id="password"
+                name="password"
+                formControlName="password"
+                class="form-control"
+                placeholder="Ingrese el password"
+                required
+              />
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary">Guardar</button>
+              <button
+                type="button"
+                (click)="clearForm()"
+                class="btn btn-primary"
+              >
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
