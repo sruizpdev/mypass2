@@ -11,13 +11,11 @@ export class UserService {
   constructor(private auth: Auth, private fs: Firestore) {}
   router = inject(Router);
 
-  addNew(user: User) {
+  addNew(user: Object) {
     const newRef = collection(this.fs, 'passwords');
     return addDoc(newRef, user);
   }
-  getAll(){
-    
-  }
+  getAll() {}
 
   isLogged(): boolean {
     return localStorage.getItem('user') ? true : false;

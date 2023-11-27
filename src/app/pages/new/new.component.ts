@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from '../../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -18,12 +20,23 @@ export class NewComponent {
     password: new FormControl(''),
     notes: new FormControl(''),
   });
+
+  userService = inject(UserService);
+  router = inject(Router);
+
   onSubmit() {
-    
+    this.userService
+      .addNew(this.newForm.value)
+      .then(() => {
+        this.router.navigate(['/home']);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     console.warn(this.newForm.value);
   }
 
-  
   clearForm(): void {
     this.newForm.patchValue({
       owner: '',
@@ -32,6 +45,5 @@ export class NewComponent {
       password: '',
       notes: '',
     });
-    console.log('borrado');
   }
 }
