@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-md-5">
       <div class="card">
@@ -7,7 +7,46 @@
         </div>
         <div class="card-body">
           <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
-            <div class="m-3">
+            <div class="m-2">
+              <div class="btn-group d-flex" role="group" aria-label="Owner">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="owner"
+                  id="ana"
+                  autocomplete="off"
+                  value="ana"
+                  formControlName="owner"
+                />
+                <label class="btn btn-outline-primary" for="ana">Ana</label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="owner"
+                  id="sergio"
+                  autocomplete="off"
+                  value="sergio"
+                  formControlName="owner"
+                />
+                <label class="btn btn-outline-primary" for="sergio"
+                  >Sergio</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="owner"
+                  id="ambos"
+                  autocomplete="off"
+                  value="ambos"
+                  formControlName="owner"
+                />
+                <label class="btn btn-outline-primary" for="ambos">Ambos</label>
+              </div>
+            </div>
+
+            <div class="m-2">
               <label for="site" class="form-label">Sitio / App</label>
               <input
                 type="text"
@@ -19,7 +58,7 @@
                 required
               />
             </div>
-            <div class="m-3">
+            <div class="m-2">
               <label for="username" class="form-label">Usuario</label>
               <input
                 type="text"
@@ -31,7 +70,7 @@
                 required
               />
             </div>
-            <div class="m-3">
+            <div class="m-2">
               <label for="site" class="form-label">Password</label>
               <input
                 type="text"
@@ -43,16 +82,28 @@
                 required
               />
             </div>
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary">Guardar</button>
-                <button
-                  type="button"
-                  (click)="clearForm()"
-                  class="btn btn-primary"
-                >
-                  Cancelar
-                </button>
-              </div>
+            <div class="m-2">
+              <label for="notes" class="form-label">Notas</label>
+              <input
+                type="text"
+                id="notes"
+                name="notes"
+                formControlName="notes"
+                class="form-control"
+                placeholder="Información adicional"
+                required
+              />
+            </div>
+            <div class="mt-4 d-grid gap-2">
+              <button class="btn btn-primary">Guardar</button>
+              <button
+                type="button"
+                (click)="clearForm()"
+                class="btn btn-primary"
+              >
+                Cancelar
+              </button>
+            </div>
           </form>
         </div>
       </div>
