@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { UserService } from '../../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,17 +19,20 @@ import { UserService } from '../../user.service';
 })
 export class LoginComponent {
   userService = inject(UserService);
+  router = inject(Router);
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.minLength(4)]),
     password: new FormControl(''),
   });
+
   onSubmit() {
     //todo: hay que comprobar que el formulario no viene vacio
     this.userService
       .login(this.loginForm.value.email!, this.loginForm.value.password!)
-      .then(() => {
-        console.log('Login success');
+      .then((res) => {
+        localStorage.setItem('user', JSON.stringify(res.user));
+        this.router.navigate(['home']);
       })
       .catch((err) => {
         console.log(err);
