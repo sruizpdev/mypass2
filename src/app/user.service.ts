@@ -1,27 +1,24 @@
 import { Injectable, inject } from '@angular/core';
 import { User } from './user';
 import { Router } from '@angular/router';
-import {
-  Auth,
-  EmailAuthProvider,
-  signInWithEmailAndPassword,
-} from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private auth: Auth) {}
+  constructor(private auth: Auth, private fs: Firestore) {}
   router = inject(Router);
 
-  //todo: hay que evitar este tipo 'any'
+  addNew(user: User) {
+    const newRef = collection(this.fs, 'passwords');
+    return addDoc(newRef, user);
+  }
+  getAll(){
+    
+  }
 
-  // login(user: any) {
-  //   if (user.email == 'sergiotto@outlook.com' && user.password == '12345') {
-  //     localStorage.setItem('user', JSON.stringify(user));
-  //     this.router.navigate(['home']);
-  //   }
-  // }
   isLogged(): boolean {
     return localStorage.getItem('user') ? true : false;
   }
