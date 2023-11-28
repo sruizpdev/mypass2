@@ -21,4 +21,13 @@ export class HomeComponent {
   constructor(private userService: UserService) {
     this.data = this.userService.getAll();
   }
+
+  delete(id: string) {
+    this.userService
+      .delete(id)
+      .then(() => {
+        console.log('Elemento borrado');
+      })
+      .catch((err) => console.log(err));
+  }
 }
