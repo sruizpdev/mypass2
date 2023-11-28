@@ -1,37 +1,41 @@
 <div class="container mt-5">
   <div class="row justify-content-center mb-3">
     <div class="col-md-5">
+      @for (item of data | async ;track $index ) {
+
       <div class="card">
         <div class="card-header">
-          <h4 class="text-center">endesa.com</h4>
+          <h4 class="text-center">{{ item.site }}</h4>
         </div>
         <div class="card-body">
           <div class="mb-3">
             <dl>
               <dt>Usuario</dt>
-              <dd>{{ "sergiotto@outlook.com" }}</dd>
+              <dd>{{ item.username }}</dd>
 
               <dt>Password</dt>
-              <dd>{{ "123456" }}</dd>
+              <dd>{{ item.password }}</dd>
             </dl>
           </div>
           <div class="d-grid gap-2">
             <button
               routerLink="/edit"
               [queryParams]="{
-                site: 'endesa',
-                username: 'sergiotto@outlook.com',
-                password: '1234567'
+                site: item.site,
+                username: item.username,
+                password: item.password
               }"
               type="button"
-              class="btn btn-primary  "
+              class="btn btn-primary"
             >
               Editar
             </button>
-            <button type="button" class="btn btn-danger ">Eliminar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
           </div>
         </div>
       </div>
+
+      }
     </div>
   </div>
 </div>
