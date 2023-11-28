@@ -9,6 +9,7 @@ import {
   collectionData,
   deleteDoc,
   doc,
+  updateDoc,
 } from '@angular/fire/firestore';
 
 @Injectable({
@@ -25,6 +26,11 @@ export class UserService {
   delete(id: string) {
     const docInstance = doc(this.fs, 'passwords', id);
     return deleteDoc(docInstance);
+  }
+
+  update(id: string, data: object) {
+    const docInstance = doc(this.fs, 'passwords', id);
+    return updateDoc(docInstance, data);
   }
   getAll() {
     const collectionInstance = collection(this.fs, 'passwords');

@@ -21,9 +21,12 @@
             <button
               routerLink="/edit"
               [queryParams]="{
+                id:item.id,
+                owner:item.owner,
                 site: item.site,
                 username: item.username,
-                password: item.password
+                password: item.password,
+                notes:item.notes
               }"
               type="button"
               class="btn btn-primary"
