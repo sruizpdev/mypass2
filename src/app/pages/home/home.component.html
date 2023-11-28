@@ -11,6 +11,8 @@
           <div class="mb-3">
             <dl>
               <dt>Usuario</dt>
+              <dd>{{ item.owner }}</dd>
+              <dt>Nombre de usuario</dt>
               <dd>{{ item.username }}</dd>
 
               <dt>Password</dt>
@@ -21,19 +23,25 @@
             <button
               routerLink="/edit"
               [queryParams]="{
-                id:item.id,
-                owner:item.owner,
+                id: item.id,
+                owner: item.owner,
                 site: item.site,
                 username: item.username,
                 password: item.password,
-                notes:item.notes
+                notes: item.notes
               }"
               type="button"
               class="btn btn-primary"
             >
               Editar
             </button>
-            <button (click)="delete(item.id)" type="button" class="btn btn-danger">Eliminar</button>
+            <button
+              (click)="delete(item.id)"
+              type="button"
+              class="btn btn-danger"
+            >
+              Eliminar
+            </button>
           </div>
         </div>
       </div>
