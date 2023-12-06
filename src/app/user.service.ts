@@ -11,6 +11,7 @@ import {
   doc,
   updateDoc,
 } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -44,5 +45,8 @@ export class UserService {
   // login
   login(email: string, password: string) {
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+  whoIsLogged(){
+    return this.auth.currentUser?.uid;
   }
 }
