@@ -14,7 +14,7 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FontAwesomeModule],
-  templateUrl: './login.component.html',
+  templateUrl: './login.component2.html',
   styleUrl: './login.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -30,7 +30,7 @@ export class LoginComponent {
   });
 
   onSubmit() {
-    //todo: hay que comprobar que el formulario no viene vacio
+    
     this.userService
       .login(this.loginForm.value.email!, this.loginForm.value.password!)
       .then((res) => {

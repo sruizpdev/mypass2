@@ -1,18 +1,30 @@
 <div class="general">
   <div class="wrapper">
     <div class="tittle"><span>Login</span></div>
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="row-form">
         <fa-icon [icon]="faUser"></fa-icon>
-        <input type="text" placeholder="email" required />
+        <input  type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+         
+        placeholder="Ingrese su email"
+        required/>
       </div>
       <div class="row-form">
         <fa-icon [icon]="faLock"></fa-icon>
-        <input type="password" placeholder="password" required />
+        <input type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+        
+        placeholder="*******"
+        required/>
       </div>
-      <div class="row-form">
+      <div class="row-form row-button">
         <input type="submit" value="Login" />
-        <div class="pass"><a href="#">Forgot password? </a></div>
+        
       </div>
     </form>
   </div>

@@ -3,8 +3,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-
-  background: #1abc9c;
+  background: #ecf0f1;
 
 }
 
@@ -12,6 +11,8 @@
   border-radius: 5px;
   background: white;
   width: 380px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .wrapper .tittle {
@@ -23,12 +24,53 @@
   font-weight: 600;
   color: white;
 }
-.wrapper form{
-  padding: 25px
+
+.wrapper form {
+  padding: 20px
 }
 
-.wrapper form .row-form{
+.wrapper form .row-form {
   height: 45px;
-  margin-bottom: 5px;
-  background: red;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.wrapper form .row-form input {
+  height: 100%;
+  width: 100%;
+  padding-left: 60px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+}
+
+.wrapper form .row-form fa-icon {
+  position: absolute;
+  width: 45px;
+  height: 100%;
+  background: #16a085;
+  border: 1px solid #16a085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px 0 0 5px;
+}
+
+.wrapper form .row-button input {
+  padding-left: 0px;
+  cursor: pointer;
+  border: 1px solid #16a085;
+  background: #16a085;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  
+}
+
+.wrapper form .row-button input:hover {
+
+  background: #1abc9c;
 }
