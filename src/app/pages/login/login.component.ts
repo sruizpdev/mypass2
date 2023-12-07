@@ -30,7 +30,6 @@ export class LoginComponent {
   });
 
   onSubmit() {
-    
     this.userService
       .login(this.loginForm.value.email!, this.loginForm.value.password!)
       .then((res) => {
@@ -40,8 +39,6 @@ export class LoginComponent {
       .catch((err) => {
         console.log(err);
       });
-
-    console.warn(this.loginForm.value);
   }
   clearForm(): void {
     this.loginForm.patchValue({ email: '', password: '' });

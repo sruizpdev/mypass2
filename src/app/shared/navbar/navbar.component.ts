@@ -7,7 +7,7 @@ import { Router, RouterLink } from '@angular/router';
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './navbar.component.html',
+  templateUrl: './navbar.component2.html',
   styleUrl: './navbar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
