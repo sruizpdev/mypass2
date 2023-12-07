@@ -1,3 +1,61 @@
 :host {
   display: block;
 }
+
+.general__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user__card {
+  width: 390px;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.user__card__header {
+  height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+
+h4 {
+  text-align: center;
+  font-size: 16px;
+
+}
+
+.user__card__buttons {
+
+  display: flex;
+  gap: 10px;
+
+
+}
+
+button {
+  width: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn__delete {
+  background: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.btn__edit {
+  background: #2980b9;
+  border: 1px solid #2980b9;
+}
