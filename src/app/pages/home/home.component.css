@@ -12,6 +12,13 @@
   margin-right: 5px;
 }
 
+@media screen and (min-width:480px) {
+  .general__container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
 .user__card {
   width: 90%;
   background: white;
@@ -62,7 +69,8 @@ button {
   background: #2980b9;
   border: 1px solid #2980b9;
 }
-dt{
+
+dt {
   font-size: 10px;
   font-weight: normal;
   color: #34495e;

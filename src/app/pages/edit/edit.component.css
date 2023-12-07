@@ -10,7 +10,12 @@
   /* height: 100vh; */
   padding-top: 20px;
 }
-
+@media screen and (min-width:480px) {
+  .general__container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
 .user__card {
   width: 90%;
   border: 1px solid lightgrey;
