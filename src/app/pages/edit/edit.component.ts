@@ -37,7 +37,7 @@ export class EditComponent {
         site: val.site,
         username: val.username,
         password: val.password,
-        notes: val.owner,
+        notes: val.notes,
       });
     });
   }

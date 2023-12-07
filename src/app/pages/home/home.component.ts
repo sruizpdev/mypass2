@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterLink],
-  templateUrl: './home.component2.html',
+  templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

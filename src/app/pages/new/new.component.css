@@ -69,3 +69,14 @@ button {
   background: #27ae60;
   border: 1px solid #27ae60;
 }
+
+.btn__back {
+
+  padding-top: 50px;
+  text-align: right;
+
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}

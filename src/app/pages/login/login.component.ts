@@ -14,7 +14,7 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FontAwesomeModule],
-  templateUrl: './login.component2.html',
+  templateUrl: './login.component.html',
   styleUrl: './login.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

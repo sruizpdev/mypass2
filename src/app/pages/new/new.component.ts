@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../user.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-new',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './new.component2.html',
+  imports: [CommonModule, ReactiveFormsModule,RouterLink],
+  templateUrl: './new.component.html',
   styleUrl: './new.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

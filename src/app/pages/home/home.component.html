@@ -1,28 +1,32 @@
-<div class="container mt-5">
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-5">
-      @for (item of data | async ;track $index ) {
+<div class="general__container">
+  @for (item of data | async ;track $index ) {
 
-      <div class="card">
-        <div class="card-header">
-          <h4 class="text-center">{{ item.site }}</h4>
-        </div>
-        <div class="card-body">
-          <div class="mb-3">
-            <dl>
-              <dt>Usuario</dt>
-              <dd>{{ item.owner }}</dd>
-              <dt>Nombre de usuario</dt>
-              <dd>{{ item.username }}</dd>
+  <div class="user__card">
+    <div class="user__card__header">
+      <h4>{{ item.site }}</h4>
+    </div>
+    <div class="user__card__body">
+      <div class="user__card__data">
+        <dl>
+          <dt>Propietario</dt>
+          <dd>{{ item.owner | uppercase}}</dd>
+          <dt>Nombre de usuario</dt>
+          <dd>{{ item.username }}</dd>
 
-              <dt>Password</dt>
-              <dd>{{ item.password }}</dd>
-            </dl>
-          </div>
-          <div class="d-grid gap-2">
-            <button
-              routerLink="/edit"
-              [queryParams]="{
+          <dt>Password</dt>
+          <dd>{{ item.password }}</dd>
+          @if (item.notes!=='') {
+          <dt>Notas</dt>
+          <dd>{{ item.notes }}</dd>
+          }
+        </dl>
+      </div>
+      <div class="user__card__buttons">
+        <button (click)="delete(item.id)" type="button" class="btn__delete">
+          Eliminar</button
+        ><button
+          routerLink="/edit"
+          [queryParams]="{
                 id: item.id,
                 owner: item.owner,
                 site: item.site,
@@ -30,23 +34,14 @@
                 password: item.password,
                 notes: item.notes
               }"
-              type="button"
-              class="btn btn-primary"
-            >
-              Editar
-            </button>
-            <button
-              (click)="delete(item.id)"
-              type="button"
-              class="btn btn-danger"
-            >
-              Eliminar
-            </button>
-          </div>
-        </div>
+          type="button"
+          class="btn__edit"
+        >
+          Editar
+        </button>
       </div>
-
-      }
     </div>
   </div>
+
+  }
 </div>

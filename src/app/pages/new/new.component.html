@@ -1,112 +1,92 @@
-<div class="container mt-3">
-  <div class="row justify-content-center">
-    <div class="col-md-5">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="text-center">Nuevo</h4>
+<div class="general__container">
+  <div class="user__card">
+    <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+      <h4>Usuario nuevo</h4>
+      <div class="radio__container">
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="ana"
+            id="ana"
+            formControlName="owner"
+          />
+          Ana
         </div>
-        <div class="card-body">
-          <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
-            <div class="m-2">
-              <div class="btn-group d-flex" role="group" aria-label="Owner">
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="owner"
-                  id="ana"
-                  autocomplete="off"
-                  value="ana"
-                  formControlName="owner"
-                />
-                <label class="btn btn-outline-primary" for="ana">Ana</label>
-
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="owner"
-                  id="sergio"
-                  autocomplete="off"
-                  value="sergio"
-                  formControlName="owner"
-                />
-                <label class="btn btn-outline-primary" for="sergio"
-                  >Sergio</label
-                >
-
-                <input
-                  type="radio"
-                  class="btn-check"
-                  name="owner"
-                  id="ambos"
-                  autocomplete="off"
-                  value="ambos"
-                  formControlName="owner"
-                />
-                <label class="btn btn-outline-primary" for="ambos">Ambos</label>
-              </div>
-            </div>
-
-            <div class="m-2">
-              <label for="site" class="form-label">Sitio / App</label>
-              <input
-                type="text"
-                id="site"
-                name="site"
-                formControlName="site"
-                class="form-control"
-                placeholder="Ingrese el sitio web o app"
-                required
-              />
-            </div>
-            <div class="m-2">
-              <label for="username" class="form-label">Usuario</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                formControlName="username"
-                class="form-control"
-                placeholder="Ingrese el nombre de usuario"
-                required
-              />
-            </div>
-            <div class="m-2">
-              <label for="site" class="form-label">Password</label>
-              <input
-                type="text"
-                id="password"
-                name="password"
-                formControlName="password"
-                class="form-control"
-                placeholder="Ingrese el password"
-                required
-              />
-            </div>
-            <div class="m-2">
-              <label for="notes" class="form-label">Notas</label>
-              <input
-                type="text"
-                id="notes"
-                name="notes"
-                formControlName="notes"
-                class="form-control"
-                placeholder="Información adicional"
-                required
-              />
-            </div>
-            <div class="mt-4 d-grid gap-2">
-              <button class="btn btn-primary">Guardar</button>
-              <button
-                type="button"
-                (click)="clearForm()"
-                class="btn btn-primary"
-              >
-                Cancelar
-              </button>
-            </div>
-          </form>
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="sergio"
+            id="sergio"
+            formControlName="owner"
+          />
+          Sergio
+        </div>
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="ambos"
+            id="ambos"
+            formControlName="owner"
+          />
+          Ambos
         </div>
       </div>
-    </div>
+
+      <label for="site">Sitio / App</label>
+      <input
+        type="text"
+        id="site"
+        name="site"
+        formControlName="site"
+        class="input__form"
+        placeholder="Ingrese el sitio web o app"
+        required
+      />
+
+      <label for="username">Usuario</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        formControlName="username"
+        class="input__form"
+        placeholder="Ingrese el nombre de usuario"
+        required
+      />
+
+      <label for="site">Password</label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        formControlName="password"
+        class="input__form"
+        placeholder="Ingrese el password"
+        required
+      />
+
+      <label for="notes">Notas</label>
+      <input
+        type="text"
+        id="notes"
+        name="notes"
+        formControlName="notes"
+        class="input__form"
+        placeholder="Información adicional"
+        required
+      />
+
+      <div class="buttons__container">
+        <button type="button" (click)="clearForm()" class="btn__cancel">
+          Limpiar</button
+        ><button class="btn__save">Guardar</button>
+      </div>
+    </form>
+  </div>
+  <div class="btn__back">
+    <a routerLink="/home">Volver</a>
   </div>
 </div>
