@@ -9,6 +9,7 @@
   align-items: center;
   /* height: 100vh; */
   padding-top: 20px;
+  
 }
 @media screen and (min-width:480px) {
   .general__container {

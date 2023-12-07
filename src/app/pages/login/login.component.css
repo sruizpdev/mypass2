@@ -1,10 +1,32 @@
 .general {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #ecf0f1;
+  
 
+
+
+}
+
+@media screen and (min-width:480px) {
+  .general {
+    max-width: 480px;
+    margin: 0 auto;
+     
+  }
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 20px;
+}
+h3{
+  font-weight: normal;
+  
 }
 
 .wrapper {
@@ -13,14 +35,15 @@
   width: 90%;
   margin-left: 5px;
   margin-right: 5px;
+  border: 1px solid lightgrey;
 }
 
 .wrapper .tittle {
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   background: #16a085;
   border-radius: 5px 5px 0 0;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: white;
 }
@@ -30,7 +53,7 @@
 }
 
 .wrapper form .row-form {
-  height: 45px;
+  height: 40px;
   margin-bottom: 15px;
   position: relative;
 }
@@ -73,4 +96,7 @@
 .wrapper form .row-button input:hover {
 
   background: #1abc9c;
+}
+img{
+  width: 80px; 
 }

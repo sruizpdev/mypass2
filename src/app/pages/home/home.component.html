@@ -11,10 +11,10 @@
           <dt>Propietario</dt>
           <dd>{{ item.owner | uppercase}}</dd>
           <dt>Nombre de usuario</dt>
-          <dd>{{ item.username }}</dd>
+          <dd class="username">{{ item.username }}</dd>
 
           <dt>Password</dt>
-          <dd>{{ item.password }}</dd>
+          <dd class="password">{{ item.password }}</dd>
           @if (item.notes!=='') {
           <dt>Notas</dt>
           <dd>{{ item.notes }}</dd>

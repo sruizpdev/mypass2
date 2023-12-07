@@ -37,6 +37,10 @@
   border-bottom: 1px solid lightgrey;
 }
 
+.user__card__data {
+  margin-bottom: 20px;
+}
+
 h4 {
   text-align: center;
   font-size: 16px;
@@ -48,6 +52,7 @@ h4 {
   display: flex;
   gap: 10px;
   margin-bottom: 5px;
+
 
 
 }
@@ -74,4 +79,9 @@ dt {
   font-size: 10px;
   font-weight: normal;
   color: #34495e;
+}
+
+.username, .password{
+  color: #27ae60;
+  font-weight: bold;
 }
