@@ -1,0 +1,90 @@
+<div class="general__container">
+  <div class="user__card">
+    <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+      <h4>Usuario nuevo</h4>
+      <div class="radio__container">
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="ana"
+            id="ana"
+            formControlName="owner"
+          />
+          Ana
+        </div>
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="sergio"
+            id="sergio"
+            formControlName="owner"
+          />
+          Sergio
+        </div>
+        <div class="radio__option">
+          <input
+            type="radio"
+            name="owner"
+            value="ambos"
+            id="ambos"
+            formControlName="owner"
+          />
+          Ambos
+        </div>
+      </div>
+
+      <label for="site">Sitio / App</label>
+      <input
+        type="text"
+        id="site"
+        name="site"
+        formControlName="site"
+        class="input__form"
+        placeholder="Ingrese el sitio web o app"
+        required
+      />
+
+      <label for="username">Usuario</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        formControlName="username"
+        class="input__form"
+        placeholder="Ingrese el nombre de usuario"
+        required
+      />
+
+      <label for="site">Password</label>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        formControlName="password"
+        class="input__form"
+        placeholder="Ingrese el password"
+        required
+      />
+
+      <label for="notes">Notas</label>
+      <input
+        type="text"
+        id="notes"
+        name="notes"
+        formControlName="notes"
+        class="input__form"
+        placeholder="Información adicional"
+        required
+      />
+
+      <div class="buttons__container">
+          <button type="button" (click)="clearForm()" class="btn__cancel">
+          Cancelar
+        </button><button class="btn__save">Guardar</button>
+      
+      </div>
+    </form>
+  </div>
+</div>

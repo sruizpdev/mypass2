@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-new',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './new.component.html',
+  templateUrl: './new.component2.html',
   styleUrl: './new.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
