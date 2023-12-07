@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { User } from './user';
+
 import { Router } from '@angular/router';
 import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import {
@@ -11,7 +11,6 @@ import {
   doc,
   updateDoc,
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
