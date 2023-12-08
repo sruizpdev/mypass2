@@ -25,8 +25,8 @@ export class LoginComponent {
   router = inject(Router);
 
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    password: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
   });
 
   onSubmit() {

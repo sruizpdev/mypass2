@@ -1,13 +1,31 @@
 <div class="general">
+  
   <div class="header">
     <h3>Bienvenido a myPass2</h3>
     <img src="assets/myPassIcon.png" alt="MyPass" />
 
     <div class="quote__container">
-      <p class="quote">"Vale más tener un lapiz corto que una memoria larga."</p>
+      <p class="quote">
+        "Vale más tener un lapiz corto que una memoria larga."
+      </p>
       <cite class="author">- Miguel de Unamuno</cite>
     </div>
   </div>
+  
+    @if
+    (loginForm.get('email')?.hasError('required')&&loginForm.get('email')?.touched)
+    {
+    <p class="err__text">El correo electrónico es obligatorio</p>
+    } @if
+    (loginForm.get('email')?.hasError('email')&&loginForm.get('email')?.touched)
+    {
+    <p class="err__text">Correo electrónico no válido</p>
+    } @if
+    (loginForm.get('password')?.hasError('required')&&loginForm.get('password')?.touched)
+    {
+    <p class="err__text">Introduce una contraseña</p>
+    }
+
   <div class="wrapper">
     <div class="tittle"><span>Login</span></div>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -34,7 +52,7 @@
         />
       </div>
       <div class="row-form row-button">
-        <input type="submit" value="Entrar" />
+        <input type="submit" value="Entrar" [disabled]="loginForm.invalid" />
       </div>
     </form>
   </div>
