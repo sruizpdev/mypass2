@@ -24,34 +24,41 @@
   }
 }
 
-.user__card {
+.card {
   width: 90%;
   background: white;
-  border: 1px solid #16a085;  border-radius: 5px;
+  border: 1px solid var(--devil-blue);
+  border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-.user__card__header {
+.card__header {
   height: 30px;
   margin-bottom: 10px;
+  border-bottom: 1px solid var(--devil-blue)
+}
+
+.card__body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid lightgrey;
+  margin-bottom: 10px;
 }
 
-.user__card__data {
-  margin-bottom: 20px;
+.card__data {
+  padding-left: 10px;
 }
 
-h4 {
+.site {
   text-align: center;
   font-size: 16px;
 
+  color: var(--hot-stone);
+
 }
 
-.user__card__buttons {
+.card__buttons {
 
   display: flex;
   gap: 10px;
@@ -59,6 +66,11 @@ h4 {
 
 
 
+}
+
+img {
+  width: 70px;
+  border-radius: 50%;
 }
 
 button {
@@ -70,13 +82,13 @@ button {
 }
 
 .btn__delete {
-  background: #e74c3c;
-  border: 1px solid #e74c3c;
+  background: var(--eye-of-newt);
+  border: 1px solid var(--eye-of-newt);
 }
 
 .btn__edit {
-  background: #2980b9;
-  border: 1px solid #2980b9;
+  background: var(--devil-blue);
+  border: 1px solid var(--devil-blue);
 }
 
 dt {
@@ -85,7 +97,10 @@ dt {
   color: #34495e;
 }
 
-.username, .password{
-  color: #27ae60;
-  font-weight: bold;
+
+.username,
+.password,
+.notes {
+  color: var(--devil-blue);
+   
 }
