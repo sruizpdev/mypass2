@@ -2,12 +2,20 @@
   <div class="user__card">
     <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
       <h4>Usuario nuevo</h4>
-      
+
       @if (newForm.get('owner')?.hasError('required') &&
       newForm.get('owner')?.untouched) {
-      <p class="user__selection">Selecione el propietario</p>
+      <p class="user__selection__msg">Selecione el propietario</p>
+      } @if (newForm.get('site')?.hasError('required') &&
+      newForm.get('site')?.touched) {
+      <p class="err__msg">Introduzca un sitio o app</p>
+      } @if (newForm.get('username')?.hasError('required') &&
+      newForm.get('username')?.touched) {
+      <p class="err__msg">Introduzca un usuario válido</p>
+      } @if (newForm.get('password')?.hasError('required') &&
+      newForm.get('password')?.touched) {
+      <p class="err__msg">Introduzca un password válido</p>
       }
-  
       <div class="radio__container">
         <div class="radio__option">
           <input
@@ -18,7 +26,6 @@
             formControlName="owner"
           />
           <p>Ana</p>
-          
         </div>
         <div class="radio__option">
           <input
@@ -50,7 +57,7 @@
         formControlName="site"
         class="input__form"
         placeholder="Ingrese el sitio web o app"
-        required
+        
       />
 
       <label for="username">Usuario</label>
@@ -61,7 +68,7 @@
         formControlName="username"
         class="input__form"
         placeholder="Ingrese el nombre de usuario"
-        required
+        
       />
 
       <label for="site">Password</label>
@@ -72,7 +79,7 @@
         formControlName="password"
         class="input__form"
         placeholder="Ingrese el password"
-        required
+        
       />
 
       <label for="notes">Notas</label>
@@ -83,13 +90,14 @@
         formControlName="notes"
         class="input__form"
         placeholder="Información adicional"
-        required
+        
       />
 
       <div class="buttons__container">
         <button type="button" (click)="clearForm()" class="btn__cancel">
-          Limpiar</button
-        ><button class="btn__save" [disabled]="newForm.invalid">Guardar</button>
+          Limpiar
+        </button>
+        <button type="submit" [disabled]="!newForm.valid" class="btn__save">Guardar</button>
       </div>
     </form>
   </div>

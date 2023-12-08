@@ -25,7 +25,7 @@ export class NewComponent {
   router = inject(Router);
 
   onSubmit() {
-    console.log('estos son los campos del formulario neew',this.newForm.value);
+    
     
     this.userService
       .addNew(this.newForm.value)
