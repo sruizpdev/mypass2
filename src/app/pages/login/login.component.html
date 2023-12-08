@@ -1,5 +1,4 @@
-<div class="general">
-  
+<div class="container">
   <div class="header">
     <h3>Bienvenido a myPass2</h3>
     <img src="assets/myPassIcon.png" alt="MyPass" />
@@ -11,27 +10,29 @@
       <cite class="author">- Miguel de Unamuno</cite>
     </div>
   </div>
-  
-    @if
-    (loginForm.get('email')?.hasError('required')&&loginForm.get('email')?.touched)
-    {
-    <p class="err__text">El correo electrónico es obligatorio</p>
-    } @if
-    (loginForm.get('email')?.hasError('email')&&loginForm.get('email')?.touched)
-    {
-    <p class="err__text">Correo electrónico no válido</p>
-    } @if
-    (loginForm.get('password')?.hasError('required')&&loginForm.get('password')?.touched)
-    {
-    <p class="err__text">Introduce una contraseña</p>
-    }
 
-  <div class="wrapper">
-    <div class="tittle"><span>Login</span></div>
+  @if
+  (loginForm.get('email')?.hasError('required')&&loginForm.get('email')?.touched)
+  {
+  <p class="err__text">Introduzca su email</p>
+  } @if
+  (loginForm.get('email')?.hasError('email')&&loginForm.get('email')?.touched) {
+  <p class="err__text">Email no válido</p>
+  } @if
+  (loginForm.get('password')?.hasError('required')&&loginForm.get('password')?.touched)
+  {
+  <p class="err__text">Introduce una contraseña</p>
+  }
+
+  <div class="login__container">
+    <div class="title">
+      <span>Login</span>
+    </div>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="row-form">
+      <div class="row__form">
         <fa-icon [icon]="faUser"></fa-icon>
         <input
+          class="input__form"
           type="email"
           id="email"
           name="email"
@@ -40,9 +41,10 @@
           required
         />
       </div>
-      <div class="row-form">
+      <div class="row__form">
         <fa-icon [icon]="faLock"></fa-icon>
         <input
+          class="input__form"
           type="password"
           id="password"
           name="password"
@@ -51,8 +53,13 @@
           required
         />
       </div>
-      <div class="row-form row-button">
-        <input type="submit" value="Entrar" [disabled]="loginForm.invalid" />
+      <div class="row__form row__button">
+        <input
+          class="input__submit"
+          type="submit"
+          value="Entrar"
+          [disabled]="loginForm.invalid"
+        />
       </div>
     </form>
   </div>

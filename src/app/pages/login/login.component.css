@@ -1,17 +1,13 @@
-.general {
+.container {
   display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
   justify-content: center;
-
-
-
-
 }
 
 @media screen and (min-width:480px) {
-  .general {
+  .container {
     max-width: 480px;
     margin: 0 auto;
 
@@ -38,30 +34,26 @@
 
 h3 {
   font-weight: normal;
-
 }
 
 .quote__container {
   display: flex;
   flex-direction: column;
   width: 60%;
-
 }
 
 .quote {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 5px;
-
 }
 
 .author {
   font-size: 10px;
   text-align: end;
-
 }
 
-.wrapper {
+.login__container {
   border-radius: 5px;
   background: white;
   width: 90%;
@@ -70,7 +62,7 @@ h3 {
   border: 1px solid #16a085;
 }
 
-.wrapper .tittle {
+.title {
   text-align: center;
   line-height: 60px;
   background: #16a085;
@@ -80,17 +72,17 @@ h3 {
   color: white;
 }
 
-.wrapper form {
+form {
   padding: 20px
 }
 
-.wrapper form .row-form {
+.row__form {
   height: 40px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.wrapper form .row-form input {
+.row__form input {
   height: 100%;
   width: 100%;
   padding-left: 60px;
@@ -100,7 +92,7 @@ h3 {
   font-size: 16px;
 }
 
-.wrapper form .row-form fa-icon {
+fa-icon {
   position: absolute;
   width: 45px;
   height: 100%;
@@ -114,7 +106,7 @@ h3 {
   border-radius: 5px 0 0 5px;
 }
 
-.wrapper form .row-button input {
+.row__button input {
   padding-left: 0px;
   cursor: pointer;
   border: 1px solid #16a085;
@@ -125,8 +117,7 @@ h3 {
 
 }
 
-.wrapper form .row-button input:hover {
-
+.row__button input:hover {
   background: #1abc9c;
 }
 

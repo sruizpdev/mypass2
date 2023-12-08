@@ -18,6 +18,13 @@
   }
 }
 
+img {
+  width: 30px;
+  border-radius: 50%;
+}
+.owner{
+  font-size: 12px;
+}
 .user__card {
   width: 90%;
   border: 1px solid #16a085;
@@ -33,7 +40,7 @@
 
   width: 100%;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .err__msg {
@@ -44,7 +51,7 @@
   background-color: var(--eye-of-newt);
   width: 100%;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 
 }
 
@@ -56,10 +63,12 @@
 
 .radio__option {
   display: flex;
-  gap: 5px;
+  gap: 2px;
   align-items: center;
 }
-
+label{
+  font-size: 12px;
+}
 input[type="radio"] {
   appearance: none;
   width: 15px;
@@ -72,6 +81,7 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   background-color: var(--palm-springs-splash);
+  
 }
 
 .input__form {
@@ -81,6 +91,7 @@ input[type="radio"]:checked {
   border: 1px solid var(--celestial-green);
   border-radius: 5px;
   margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .input__form:focus {
