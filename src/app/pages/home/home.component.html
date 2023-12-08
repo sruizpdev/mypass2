@@ -9,7 +9,7 @@
       <div class="user__card__data">
         <dl>
           <dt>Propietario</dt>
-          <dd>{{ item.owner | uppercase}}</dd>
+          <dd>{{ item.owner | uppercase }}</dd>
           <dt>Nombre de usuario</dt>
           <dd class="username">{{ item.username }}</dd>
 
@@ -27,13 +27,13 @@
         ><button
           routerLink="/edit"
           [queryParams]="{
-                id: item.id,
-                owner: item.owner,
-                site: item.site,
-                username: item.username,
-                password: item.password,
-                notes: item.notes
-              }"
+            id: item.id,
+            owner: item.owner,
+            site: item.site,
+            username: item.username,
+            password: item.password,
+            notes: item.notes
+          }"
           type="button"
           class="btn__edit"
         >
