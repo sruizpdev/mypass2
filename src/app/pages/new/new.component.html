@@ -2,6 +2,12 @@
   <div class="user__card">
     <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
       <h4>Usuario nuevo</h4>
+      
+      @if (newForm.get('owner')?.hasError('required') &&
+      newForm.get('owner')?.untouched) {
+      <p class="user__selection">Selecione el propietario</p>
+      }
+  
       <div class="radio__container">
         <div class="radio__option">
           <input
@@ -11,7 +17,8 @@
             id="ana"
             formControlName="owner"
           />
-          Ana
+          <p>Ana</p>
+          
         </div>
         <div class="radio__option">
           <input
@@ -82,7 +89,7 @@
       <div class="buttons__container">
         <button type="button" (click)="clearForm()" class="btn__cancel">
           Limpiar</button
-        ><button class="btn__save">Guardar</button>
+        ><button class="btn__save" [disabled]="newForm.invalid">Guardar</button>
       </div>
     </form>
   </div>

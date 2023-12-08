@@ -1,9 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
+}
+
+:root {
+  
+  --summer-sky: #34ace0;
+  --devil-blue: #227093;
+  --mandarin-sorbet: #ffb142;
+  --alameda-ochre: #cc8e35;
+  --celestial-green: #33d9b2;
+  --palm-springs-splash: #218c74;
+  --hot-stone: #aaa69d;
+
 
 }

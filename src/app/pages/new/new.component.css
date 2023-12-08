@@ -10,17 +10,25 @@
   /* height: 100vh; */
   padding-top: 20px;
 }
+
 @media screen and (min-width:480px) {
   .general__container {
     max-width: 480px;
     margin: 0 auto;
   }
 }
+
 .user__card {
   width: 90%;
-  border: 1px solid lightgrey;
+  border: 1px solid #16a085;
   border-radius: 5px;
   padding: 10px;
+}
+
+.user__selection {
+
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .radio__container {
@@ -32,15 +40,37 @@
 .radio__option {
   display: flex;
   gap: 5px;
+  align-items: center;
+}
+
+input[type="radio"] {
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border: 1px solid var(--hot-stone);
+	border-radius: 50%;
+	background-clip: content-box;
+	padding: 1px;
+}
+
+input[type="radio"]:checked {
+	background-color: var(--palm-springs-splash);
 }
 
 .input__form {
   display: block;
   width: 100%;
-  padding: 5px;
-  border: 1px solid lightgrey;
+  padding: 10px;
+  border: 1px solid var(--celestial-green);
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.input__form:focus {
+
+  outline: none;
+  border: 2px solid var(--palm-springs-splash);
+  ;
 }
 
 h4 {
@@ -81,7 +111,8 @@ button {
   text-align: right;
 
 }
-a{
+
+a {
   text-decoration: none;
   cursor: pointer;
 }

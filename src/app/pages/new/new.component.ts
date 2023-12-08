@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../user.service';
 import { Router, RouterLink } from '@angular/router';
 
@@ -14,10 +14,10 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class NewComponent {
   newForm = new FormGroup({
-    owner: new FormControl(''),
-    site: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl(''),
+    owner: new FormControl('',[Validators.required]),
+    site: new FormControl('',[Validators.required]),
+    username: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
     notes: new FormControl(''),
   });
 
