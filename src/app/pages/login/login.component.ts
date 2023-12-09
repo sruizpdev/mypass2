@@ -21,6 +21,7 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 export class LoginComponent {
   faUser = faUser;
   faLock = faLock;
+  loginErr = false;
   userService = inject(UserService);
   router = inject(Router);
 
@@ -34,10 +35,12 @@ export class LoginComponent {
       .login(this.loginForm.value.email!, this.loginForm.value.password!)
       .then((res) => {
         localStorage.setItem('user', JSON.stringify(res.user));
+        this.loginErr = false;
         this.router.navigate(['home']);
       })
       .catch((err) => {
         console.log(err);
+        this.loginErr = true;
       });
   }
   clearForm(): void {

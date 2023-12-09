@@ -11,9 +11,9 @@
   padding-top: 20px;
 }
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:380px) {
   .general__container {
-    max-width: 480px;
+    max-width: 380px;
     margin: 0 auto;
   }
 }
@@ -22,20 +22,20 @@ img {
   width: 30px;
   border-radius: 50%;
 }
-.owner{
-  font-size: 12px;
-}
+
+
+
 .user__card {
   width: 90%;
   border: 1px solid #16a085;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
 }
 
 .user__selection__msg {
   text-align: center;
   margin-bottom: 10px;
-  font-size: 12px;
+  
 
 
   width: 100%;
@@ -46,9 +46,9 @@ img {
 .err__msg {
   text-align: center;
   margin-bottom: 10px;
-  font-size: 11px;
+  
   color: white;
-  background-color: var(--eye-of-newt);
+  background-color: var(--blood);
   width: 100%;
   border-radius: 5px;
   padding: 10px;
@@ -66,54 +66,55 @@ img {
   gap: 2px;
   align-items: center;
 }
-label{
-  font-size: 12px;
-}
+
+ 
+
 input[type="radio"] {
   appearance: none;
   width: 15px;
   height: 15px;
-  border: 1px solid var(--hot-stone);
+  border: 1px solid var(--stone);
   border-radius: 50%;
   background-clip: content-box;
   padding: 1px;
 }
 
 input[type="radio"]:checked {
-  background-color: var(--palm-springs-splash);
-  
+  background-color: var(--olive);
+
 }
 
 .input__form {
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--celestial-green);
+  border: 1px solid var(--olive);
   border-radius: 5px;
   margin-bottom: 20px;
-  font-size: 12px;
+  margin-top: 5px;
+  
 }
 
 .input__form:focus {
 
   outline: none;
-  border: 2px solid var(--palm-springs-splash);
-  ;
+  border: 2px solid var(--olive);
+  
 }
 
-h4 {
+.page__name{
   height: 35px;
-  text-align: center;
-  font-size: 16px;
-  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--olive);
   margin-bottom: 10px;
-
-
 }
 
 .buttons__container {
   display: flex;
   gap: 10px;
+  margin-top: 30px;
 }
 
 button {
@@ -125,13 +126,21 @@ button {
 }
 
 .btn__cancel {
-  background: #2980b9;
-  border: 1px solid #2980b9;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+}
+.btn__cancel:hover {
+  background: var(--sky);
+  border: 1px solid var(--sky);
 }
 
 .btn__save {
-  background: #27ae60;
-  border: 1px solid #27ae60;
+  background: var(--olive);
+  border: 1px solid var(--olive);
+}
+.btn__save:hover {
+  background: var(--green);
+  border: 1px solid var(--green);
 }
 
 .btn__back {
@@ -143,5 +152,9 @@ button {
 
 a {
   text-decoration: none;
-  cursor: pointer;
+  cursor: pointer;color: var(--olive);
+
+}
+::placeholder{
+  color:var(--stone)
 }

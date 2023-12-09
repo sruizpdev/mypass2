@@ -1,7 +1,8 @@
 <div class="general__container">
-  <div class="user__card">
-    <h4>Editando</h4>
+  <div class="card">
+    <p class="page__name">Editando</p>
     <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+      
       <label for="site">Sitio / App</label>
       <input
         type="text"
@@ -46,10 +47,10 @@
       />
 
       <div class="buttons__container">
-        <button class="btn__save">Actualizar</button>
         <button routerLink="/home" type="button" class="btn__cancel">
           Cancelar
         </button>
+        <button class="btn__save">Actualizar</button>
       </div>
     </form>
   </div>

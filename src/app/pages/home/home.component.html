@@ -3,7 +3,7 @@
 
   <div class="card">
     <div class="card__header">
-      <p class="site">{{ item.site }}</p>
+      <span class="site">{{ item.site }}</span>
     </div>
     <div class="card__body">
       <div class="card__img">
@@ -11,10 +11,10 @@
       </div>
       <div class="card__data">
         <dl>
-          <dt>Nombre de usuario</dt>
+          <dt>Usuario:</dt>
           <dd class="username">{{ item.username }}</dd>
 
-          <dt>Password</dt>
+          <dt>Password:</dt>
           <dd class="password">{{ item.password }}</dd>
           @if (item.notes!=='') {
           <dt>Notas</dt>

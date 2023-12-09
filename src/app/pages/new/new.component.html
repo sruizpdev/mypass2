@@ -1,7 +1,7 @@
 <div class="general__container">
   <div class="user__card">
     <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
-      <h4>Nuevo usuario</h4>
+      <p class="page__name">Nuevo usuario</p>
 
       @if (newForm.get('owner')?.hasError('required') &&
       newForm.get('owner')?.untouched) {

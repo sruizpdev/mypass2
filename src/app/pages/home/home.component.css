@@ -12,9 +12,9 @@
   margin-right: 5px;
 }
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:380px) {
   .general__container {
-    max-width: 480px;
+    max-width: 380px;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
@@ -27,18 +27,22 @@
 .card {
   width: 90%;
   background: white;
-  border: 1px solid var(--devil-blue);
+  border: 1px solid var(--olive);
   border-radius: 5px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 0px 5px 5px 5px;
   display: flex;
   flex-direction: column;
 }
 
 .card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   height: 30px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--devil-blue)
+  
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--olive)
 }
 
 .card__body {
@@ -52,9 +56,9 @@
 
 .site {
   text-align: center;
-  font-size: 16px;
+   font-weight: bold;
 
-  color: var(--hot-stone);
+  color: var(--olive);
 
 }
 
@@ -71,6 +75,7 @@
 img {
   width: 70px;
   border-radius: 50%;
+  border: 1px solid var(--olive);
 }
 
 button {
@@ -82,25 +87,37 @@ button {
 }
 
 .btn__delete {
-  background: var(--eye-of-newt);
-  border: 1px solid var(--eye-of-newt);
+  background: var(--blood);
+  border: 1px solid var(--blood);
+  cursor: pointer;
 }
-
+.btn__delete:hover {
+  background: var(--fluorescent);
+  border: 1px solid var(--fluorescent);
+}
 .btn__edit {
-  background: var(--devil-blue);
-  border: 1px solid var(--devil-blue);
+  background: var(--olive);
+  border: 1px solid var(--olive);
+  cursor: pointer;
+}
+.btn__edit:hover {
+  background: var(--green);
+  border: 1px solid var(--green);
 }
 
 dt {
-  font-size: 10px;
+   
   font-weight: normal;
   color: #34495e;
 }
 
 
+
 .username,
 .password,
 .notes {
-  color: var(--devil-blue);
-   
+  font-weight: bold;
+  color: var(--olive);
+  margin-bottom: 10px;
+
 }

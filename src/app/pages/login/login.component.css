@@ -6,9 +6,9 @@
   justify-content: center;
 }
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:380px) {
   .container {
-    max-width: 480px;
+    max-width: 380px;
     margin: 0 auto;
 
   }
@@ -25,15 +25,23 @@
 
 
 .err__text {
-  color: white;padding: 10px;
-  background: #f1c40f;
+  color: white;
+  padding: 10px;
+  background: var(--mandarin);
   margin-bottom: 10px;
   border-radius: 5px;
   text-align: center;
+
 }
 
-h3 {
+p {
   font-weight: normal;
+}
+
+span {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--olive);
 }
 
 .quote__container {
@@ -43,8 +51,8 @@ h3 {
 }
 
 .quote {
-  font-size: 12px;
-  font-weight: bold;
+  
+  text-align: left;
   margin-bottom: 5px;
 }
 
@@ -59,21 +67,22 @@ h3 {
   width: 90%;
   margin-left: 5px;
   margin-right: 5px;
-  border: 1px solid #16a085;
+  border: 1px solid var(--olive);
 }
 
 .title {
   text-align: center;
   line-height: 60px;
-  background: #16a085;
+  background: var(--olive);
   border-radius: 5px 5px 0 0;
-  font-size: 20px;
-  font-weight: 600;
+
   color: white;
 }
 
 form {
-  padding: 20px
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .row__form {
@@ -88,37 +97,42 @@ form {
   padding-left: 60px;
   outline: none;
   border-radius: 5px;
-  border: 1px solid lightgrey;
-  font-size: 16px;
+  border: 1px solid var(--olive);
+  
+}
+
+::placeholder {
+  color: var(--stone);
 }
 
 fa-icon {
   position: absolute;
   width: 45px;
   height: 100%;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background: var(--olive);
+  border: 1px solid var(--olive);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px;
+  
   border-radius: 5px 0 0 5px;
 }
 
 .row__button input {
+
   padding-left: 0px;
   cursor: pointer;
-  border: 1px solid #16a085;
-  background: #16a085;
+  border: 1px solid var(--olive);
+  background: var(--olive);
   color: white;
-  font-weight: 500;
-  font-size: 18px;
+  
 
 }
 
 .row__button input:hover {
-  background: #1abc9c;
+  border: 1px solid var(--green);
+  background: var(--green);
 }
 
 img {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../../user.service';
 import { Observable } from 'rxjs';
@@ -20,11 +20,15 @@ export class HomeComponent {
   }
 
   delete(id: string) {
-    this.userService
-      .delete(id)
-      .then(() => {
-        console.log('Elemento borrado');
-      })
-      .catch((err) => console.log(err));
+    const res = confirm('¿Está seguro?');
+
+    if (res) {
+      this.userService
+        .delete(id)
+        .then(() => {
+          console.log('Acción confirmada');
+        })
+        .catch((err) => console.log(err));
+    } 
   }
 }

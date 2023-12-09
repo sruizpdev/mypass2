@@ -19,4 +19,9 @@ li {
 a {
   text-decoration: none;
   cursor: pointer;
+  color:var(--olive)
+}
+
+a:hover {
+  text-decoration: underline;
 }
