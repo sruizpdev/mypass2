@@ -45,7 +45,7 @@ export class UserService {
   login(email: string, password: string) {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
-  whoIsLogged(){
+  whoIsLogged() {
     return this.auth.currentUser?.uid;
   }
 }

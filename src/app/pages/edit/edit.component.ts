@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { UserService } from '../../user.service';
 
@@ -13,12 +13,12 @@ import { UserService } from '../../user.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EditComponent {
-  newForm = new FormGroup({
+  editForm = new FormGroup({
     id: new FormControl(''),
-    owner: new FormControl(''),
-    site: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl(''),
+    owner: new FormControl('',[Validators.required]),
+    site: new FormControl('',[Validators.required]),
+    username: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
     notes: new FormControl(''),
   });
 
@@ -31,7 +31,7 @@ export class EditComponent {
 
     this.activatedRoute.queryParams.subscribe((val: any) => {
       console.log(val);
-      this.newForm.patchValue({
+      this.editForm.patchValue({
         id: val.id,
         owner: val.owner,
         site: val.site,
@@ -42,18 +42,20 @@ export class EditComponent {
     });
   }
   onSubmit() {
+    
+    
     this.userService
-      .update(this.newForm.value.id!, this.newForm.value)
+      .update(this.editForm.value.id!, this.editForm.value)
       .then((res) => {
         console.log('actualizado');
         this.router.navigate(['/home']);
       })
       .catch((err) => console.log(err));
     // this.userService.login(this.loginForm.value);
-    console.warn(this.newForm.value);
+    console.warn(this.editForm.value);
   }
   clearForm(): void {
-    this.newForm.patchValue({ site: '', username: '', password: '' });
+    this.editForm.patchValue({ site: '', username: '', password: '' });
     console.log('borrado');
   }
 }
