@@ -42,10 +42,19 @@ export class EditComponent {
     });
   }
   onSubmit() {
+    const data = {
+      id:this.editForm.value.id!,
+      owner: this.editForm.value.owner?.trim(),
+      site: this.editForm.value.site?.trim(),
+      username: this.editForm.value.username?.trim(),
+      password: this.editForm.value.password?.trim(),
+      notes: this.editForm.value.notes?.trim(),
+    };
+   
     
     
     this.userService
-      .update(this.editForm.value.id!, this.editForm.value)
+      .update(this.editForm.value.id!, data)
       .then((res) => {
         console.log('actualizado');
         this.router.navigate(['/home']);
