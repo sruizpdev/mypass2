@@ -20,20 +20,20 @@ export class UserService {
   router = inject(Router);
 
   addNew(user: Object) {
-    const dbInstance = collection(this.fs, 'passwords');
+    const dbInstance = collection(this.fs, 'mypass');
     return addDoc(dbInstance, user);
   }
   delete(id: string) {
-    const docInstance = doc(this.fs, 'passwords', id);
+    const docInstance = doc(this.fs, 'mypass', id);
     return deleteDoc(docInstance);
   }
 
   update(id: string, data: object) {
-    const docInstance = doc(this.fs, 'passwords', id);
+    const docInstance = doc(this.fs, 'mypass', id);
     return updateDoc(docInstance, data);
   }
   getAll() {
-    const collectionInstance = collection(this.fs, 'passwords');
+    const collectionInstance = collection(this.fs, 'mypass');
     return collectionData(collectionInstance, { idField: 'id' });
   }
 
