@@ -5,17 +5,17 @@ import { EditComponent } from './pages/edit/edit.component';
 import { NewComponent } from './pages/new/new.component';
 import { authGuard } from './auth.guard';
 
-// export const routes: Routes = [
-//   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
-//   { path: 'new', component: NewComponent, canActivate: [authGuard] },
-//   { path: 'edit', component: EditComponent, canActivate: [authGuard] },
-//   { path: 'login', component: LoginComponent },
-//   { path: '**', redirectTo: 'home' },
-// ];
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'new', component: NewComponent },
-  { path: 'edit', component: EditComponent  },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'new', component: NewComponent, canActivate: [authGuard] },
+  { path: 'edit', component: EditComponent, canActivate: [authGuard] },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: 'home' },
 ];
+// export const routes: Routes = [
+//   { path: 'home', component: HomeComponent },
+//   { path: 'new', component: NewComponent },
+//   { path: 'edit', component: EditComponent  },
+//   { path: 'login', component: LoginComponent },
+//   { path: '**', redirectTo: 'home' },
+// ];

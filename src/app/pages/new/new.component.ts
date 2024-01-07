@@ -37,14 +37,42 @@ export class NewComponent {
       password: this.newForm.value.password?.trim(),
       notes: this.newForm.value.notes?.trim(),
     };
-    this.userService
-      .addNew(data)
-      .then(() => {
-        this.router.navigate(['/home']);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    let errorMessage = '';
+
+    if (this.newForm.invalid) {
+      if (
+        this.newForm.get('owner')?.hasError('required') 
+      ) {
+        errorMessage += 'Por favor, seleccione un propietario.\n';
+      }
+      if (
+        this.newForm.get('site')?.hasError('required') 
+      ) {
+        errorMessage += 'Por favor, introduzca un sitio o app.\n';
+      }
+      if (
+        this.newForm.get('username')?.hasError('required')
+      ) {
+        errorMessage += 'Por favor, introduzca un nombre de usuario.\n';
+      }
+      if (
+        this.newForm.get('password')?.hasError('required')
+      ) {
+        errorMessage += 'Por favor, introduzca un password.\n';
+      }
+      if (errorMessage) {
+        alert(errorMessage);
+      }
+    } else {
+      this.userService
+        .addNew(data)
+        .then(() => {
+          this.router.navigate(['/home']);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }
 
   clearForm(): void {

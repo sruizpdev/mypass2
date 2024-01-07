@@ -1,19 +1,7 @@
 <div class="general__container">
-  <div class="card">
-    
-    @if (editForm.get('owner')?.hasError('required') &&
-      editForm.get('owner')?.untouched) {
-      <p class="user__selection__msg">Selecione el propietario</p>
-      } @if (editForm.get('site')?.hasError('required') &&
-      editForm.get('site')?.touched) {
-      <p class="err__msg">Introduzca un sitio o app</p>
-      } @if (editForm.get('username')?.hasError('required') &&
-      editForm.get('username')?.touched) {
-      <p class="err__msg">Introduzca un usuario válido</p>
-      } @if (editForm.get('password')?.hasError('required') &&
-      editForm.get('password')?.touched) {
-      <p class="err__msg">Introduzca un password válido</p>
-      }
+  <div class="user__card">
+    <p>Este password es para...</p>
+   
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
       <div class="radio__container">
         <div class="radio__option">
@@ -26,7 +14,7 @@
           />
 
           <p class="owner">Ana</p>
-          <img src="../../../assets/ana.jpg">
+          <img src="/assets/icons/ana.png" />
         </div>
         <div class="radio__option">
           <input
@@ -36,7 +24,8 @@
             id="sergio"
             formControlName="owner"
           />
-          <p class="owner">Sergio</p><img src="../../../assets/sergio.jpg">
+          <p class="owner">Sergio</p>
+          <img src="/assets/icons/sergio.png" />
         </div>
         <div class="radio__option">
           <input
@@ -46,12 +35,15 @@
             id="ambos"
             formControlName="owner"
           />
-          <p class="owner">Ambos</p><img src="../../../assets/ambos.jpg">
+          <p class="owner">Ambos</p>
+          <img src="assets/icons/ana.png" />
+          <img class="sergio" src="/assets/icons/sergio.png" />
         </div>
       </div>
       <label for="site">Sitio / App</label>
       <input
         type="text"
+        autocapitalize="none"
         id="site"
         name="site"
         formControlName="site"
@@ -63,6 +55,7 @@
       <label for="username">Usuario</label>
       <input
         type="text"
+        autocapitalize="none"
         id="username"
         name="username"
         formControlName="username"
@@ -74,6 +67,7 @@
       <label for="site">Password</label>
       <input
         type="text"
+        autocapitalize="none"
         id="password"
         name="password"
         formControlName="password"
@@ -96,7 +90,7 @@
         <button (click)="delete()" type="button" class="btn__cancel">
           Eliminar
         </button>
-        <button class="btn__save" [disabled]="!editForm.valid">Actualizar</button>
+        <button class="btn__save">Actualizar</button>
       </div>
     </form>
   </div>

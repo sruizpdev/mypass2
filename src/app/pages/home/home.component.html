@@ -3,6 +3,7 @@
     <input
       class="search-input"
       type="text"
+      autocapitalize="none"
       [(ngModel)]="searchTerm"
       (input)="onSearch()"
       placeholder=""
@@ -24,8 +25,21 @@
       logo: item.logo
     }"
   >
-    <p class="site-txt">{{ item.site }}</p>
-    <p>{{ item.owner }}</p>
+    <p class="site">{{item.site}}</p>
+
+    <div class="owner">
+      <div class="avatar">
+        @if (item.owner =='ambos') {
+
+        <img src="/assets/icons/ana.png" alt="" />
+        <img class="sergio" src="/assets/icons/sergio.png" alt="" />
+        }@else {
+        <img src="/assets/icons/{{ item.owner }}.png" alt="" />}
+      </div>
+      <p class="owner-txt">
+        {{ item.owner | uppercase }}
+      </p>
+    </div>
   </div>
   }}
 </div>

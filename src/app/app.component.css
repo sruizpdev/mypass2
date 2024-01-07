@@ -1,0 +1,12 @@
+.container {
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media screen and (min-width: 380px) {
+    .container {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+  }

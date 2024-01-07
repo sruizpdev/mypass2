@@ -2,26 +2,55 @@
   display: block;
 }
 
-
-ul {
-  list-style-type: none;
+.menu{
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+  gap: 10px;
+  margin: 0px 10px;
 }
 
-li {
-  margin-left: 10px;
-  margin-right: 10px;
+.item-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+  height: 70px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  color:var(--green)
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  color:var(--olive)
+  color: var(--green);
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 50px;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: var(--green);
+  color: white;
+}
+.active{
+  border:1px solid var(--green)
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px 20px 10px;
+}
+.top p {
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+img {
+  width: 30px;
 }

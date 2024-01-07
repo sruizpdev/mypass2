@@ -1,21 +1,8 @@
 <div class="general__container">
   <div class="user__card">
     <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
-      <p class="page__name">Nuevo usuario</p>
+      <p>Este password es para...</p>
 
-      @if (newForm.get('owner')?.hasError('required') &&
-      newForm.get('owner')?.untouched) {
-      <p class="user__selection__msg">Selecione el propietario</p>
-      } @if (newForm.get('site')?.hasError('required') &&
-      newForm.get('site')?.touched) {
-      <p class="err__msg">Introduzca un sitio o app</p>
-      } @if (newForm.get('username')?.hasError('required') &&
-      newForm.get('username')?.touched) {
-      <p class="err__msg">Introduzca un usuario válido</p>
-      } @if (newForm.get('password')?.hasError('required') &&
-      newForm.get('password')?.touched) {
-      <p class="err__msg">Introduzca un password válido</p>
-      }
       <div class="radio__container">
         <div class="radio__option">
           <input
@@ -27,7 +14,7 @@
           />
 
           <p class="owner">Ana</p>
-          <img src="../../../assets/ana.jpg">
+          <img src="/assets/icons/ana.png" />
         </div>
         <div class="radio__option">
           <input
@@ -37,7 +24,8 @@
             id="sergio"
             formControlName="owner"
           />
-          <p class="owner">Sergio</p><img src="../../../assets/sergio.jpg">
+          <p class="owner">Sergio</p>
+          <img src="/assets/icons/sergio.png" />
         </div>
         <div class="radio__option">
           <input
@@ -47,41 +35,43 @@
             id="ambos"
             formControlName="owner"
           />
-          <p class="owner">Ambos</p><img src="../../../assets/ambos.jpg">
+          <p class="owner">Ambos</p>
+          <img src="assets/icons/ana.png" />
+          <img class="sergio" src="/assets/icons/sergio.png" />
         </div>
       </div>
 
       <label for="site">Sitio / App</label>
       <input
         type="text"
+        autocapitalize="none"
         id="site"
         name="site"
         formControlName="site"
         class="input__form"
         placeholder="Ingrese el sitio web o app"
-        
       />
 
       <label for="username">Usuario</label>
       <input
         type="text"
+        autocapitalize="none"
         id="username"
         name="username"
         formControlName="username"
         class="input__form"
         placeholder="Ingrese el nombre de usuario"
-        
       />
 
       <label for="site">Password</label>
       <input
         type="text"
+        autocapitalize="none"
         id="password"
         name="password"
         formControlName="password"
         class="input__form"
         placeholder="Ingrese el password"
-        
       />
 
       <label for="notes">Notas</label>
@@ -92,18 +82,12 @@
         formControlName="notes"
         class="input__form"
         placeholder="Información adicional"
-        
       />
 
       <div class="buttons__container">
-        <button type="button" (click)="clearForm()" class="btn__cancel">
-          Limpiar
-        </button>
-        <button type="submit" [disabled]="!newForm.valid" class="btn__save">Guardar</button>
+        <button type="button" (click)="clearForm()">Limpiar</button>
+        <button type="submit">Guardar</button>
       </div>
     </form>
-  </div>
-  <div class="btn__back">
-    <a routerLink="/home">Volver</a>
   </div>
 </div>

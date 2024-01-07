@@ -5,47 +5,52 @@
 .general__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* height: 100vh; */
-  padding-top: 20px;
-
+  height: 100vh;
+  padding: 10px;
 }
 
-@media screen and (min-width:380px) {
+@media screen and (min-width: 380px) {
   .general__container {
     max-width: 380px;
     margin: 0 auto;
   }
 }
 
-.radio__container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.radio__option {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-}
-
 img {
-  width: 30px;
-  border-radius: 50%;
+  height: 25px;
 }
 
-.err__msg {
-  text-align: center;
-  margin-bottom: 10px;
-
-  color: white;
-  background-color: red;
+.user__card {
   width: 100%;
+  border: 1px solid var(--gray);
+  background-color: white;
   border-radius: 5px;
   padding: 10px;
+}
 
+
+
+.radio__container {
+  display: flex;
+  gap:5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.owner{
+  margin-left: 5px;
+}
+.radio__option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray);
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.sergio {
+  margin-left: -9px;
 }
 
 input[type="radio"] {
@@ -60,26 +65,6 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   background-color: var(--green);
-
-}
-
-.card {
-  width: 90%;
-  border: 1px solid var(--gray);
-  border-radius: 5px;
-  padding: 10px;
-  background-color: white;
-}
-
-.radio__container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.radio__option {
-  display: flex;
-  gap: 5px;
 }
 
 .input__form {
@@ -97,40 +82,36 @@ input[type="radio"]:checked {
   border: 2px solid var(--green);
 }
 
-
+.page__name {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--green);
+  margin-bottom: 10px;
+}
 
 .buttons__container {
   display: flex;
   gap: 10px;
+  margin-top: 30px;
 }
 
 button {
   width: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px 0px;
   color: white;
   border-radius: 5px;
+  background: var(--green);
+  border: 1px solid var(--gray);
 }
 
-.btn__cancel {
-  background-color: var(--green);
+button:hover {
+  background: var(--light-gray);
   border: none;
+  color: var(--green);
 }
 
-.btn__cancel:hover {
-  background-color: red;
-  border: none;
-  cursor: pointer;
-}
-
-.btn__save {
-  background-color: var(--green);
-  border: none;
-}
-
-
-.btn__save:hover {
-  background-color: var(--light-green);
-  border: none;
-  cursor: pointer;
+::placeholder {
+  color: gray;
 }

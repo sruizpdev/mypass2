@@ -5,13 +5,12 @@
 .general__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-top: 20px;
+  padding: 10px;
 }
 
-@media screen and (min-width:380px) {
+@media screen and (min-width: 380px) {
   .general__container {
     max-width: 380px;
     margin: 0 auto;
@@ -19,95 +18,74 @@
 }
 
 img {
-  width: 30px;
-  border-radius: 50%;
+  height: 25px;
 }
-
-
 
 .user__card {
-  width: 90%;
-  border: 1px solid #16a085;
-  border-radius: 5px;
-  padding: 0px 10px 10px 10px;
-}
-
-.user__selection__msg {
-  text-align: center;
-  margin-bottom: 10px;
-  
-
-
   width: 100%;
+  border: 1px solid var(--gray);
+  background-color: white;
   border-radius: 5px;
   padding: 10px;
-}
-
-.err__msg {
-  text-align: center;
-  margin-bottom: 10px;
-  
-  color: white;
-  background-color: var(--blood);
-  width: 100%;
-  border-radius: 5px;
-  padding: 10px;
-
 }
 
 .radio__container {
   display: flex;
-  justify-content: space-around;
+  gap: 5px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
-
+.owner {
+  margin-left: 5px;
+}
 .radio__option {
+  flex: 1;
   display: flex;
-  gap: 2px;
   align-items: center;
+  border: 1px solid var(--gray);
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
 }
-
- 
+.sergio {
+  margin-left: -9px;
+}
 
 input[type="radio"] {
   appearance: none;
   width: 15px;
   height: 15px;
-  border: 1px solid var(--stone);
+  border: 1px solid var(--gray);
   border-radius: 50%;
   background-clip: content-box;
   padding: 1px;
 }
 
 input[type="radio"]:checked {
-  background-color: var(--olive);
-
+  background-color: var(--green);
 }
 
 .input__form {
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--olive);
+  border: 1px solid var(--gray);
   border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 5px;
-  
 }
 
 .input__form:focus {
-
   outline: none;
-  border: 2px solid var(--olive);
-  
+  border: 2px solid var(--green);
 }
 
-.page__name{
+.page__name {
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--olive);
+  border-bottom: 1px solid var(--green);
   margin-bottom: 10px;
 }
 
@@ -119,42 +97,19 @@ input[type="radio"]:checked {
 
 button {
   width: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px 0px;
   color: white;
   border-radius: 5px;
-}
-
-.btn__cancel {
-  background: var(--blue);
-  border: 1px solid var(--blue);
-}
-.btn__cancel:hover {
-  background: var(--sky);
-  border: 1px solid var(--sky);
-}
-
-.btn__save {
-  background: var(--olive);
-  border: 1px solid var(--olive);
-}
-.btn__save:hover {
   background: var(--green);
-  border: 1px solid var(--green);
+  border: 1px solid var(--gray);
 }
 
-.btn__back {
-
-  padding-top: 50px;
-  text-align: right;
-
+button:hover {
+  background: var(--light-gray);
+  border: none;
+  color: var(--green);
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;color: var(--olive);
-
-}
-::placeholder{
-  color:var(--stone)
+::placeholder {
+  color: gray;
 }
