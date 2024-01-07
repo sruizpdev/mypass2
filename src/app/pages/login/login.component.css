@@ -27,7 +27,7 @@
 .err__text {
   color: white;
   padding: 10px;
-  background: var(--mandarin);
+  background: orange;
   margin-bottom: 10px;
   border-radius: 5px;
   text-align: center;
@@ -41,7 +41,7 @@ p {
 span {
   font-style: italic;
   font-weight: bold;
-  color: var(--olive);
+  color: var(--green);
 }
 
 .quote__container {
@@ -67,13 +67,13 @@ span {
   width: 90%;
   margin-left: 5px;
   margin-right: 5px;
-  border: 1px solid var(--olive);
+  border: 1px solid var(--green);
 }
 
 .title {
   text-align: center;
   line-height: 60px;
-  background: var(--olive);
+  background: var(--green);
   border-radius: 5px 5px 0 0;
 
   color: white;
@@ -97,7 +97,7 @@ form {
   padding-left: 60px;
   outline: none;
   border-radius: 5px;
-  border: 1px solid var(--olive);
+  border: 1px solid var(--green);
   
 }
 
@@ -109,8 +109,8 @@ fa-icon {
   position: absolute;
   width: 45px;
   height: 100%;
-  background: var(--olive);
-  border: 1px solid var(--olive);
+  background: var(--green);
+  border: 1px solid var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,8 +123,8 @@ fa-icon {
 
   padding-left: 0px;
   cursor: pointer;
-  border: 1px solid var(--olive);
-  background: var(--olive);
+  border: 1px solid var(--green);
+  background: var(--green);
   color: white;
   
 

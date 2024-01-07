@@ -1,6 +1,6 @@
 <div class="general__container">
   <div class="card">
-    <p class="page__name">Editando</p>
+    
     @if (editForm.get('owner')?.hasError('required') &&
       editForm.get('owner')?.untouched) {
       <p class="user__selection__msg">Selecione el propietario</p>
@@ -93,8 +93,8 @@
       />
 
       <div class="buttons__container">
-        <button routerLink="/home" type="button" class="btn__cancel">
-          Cancelar
+        <button (click)="delete()" type="button" class="btn__cancel">
+          Eliminar
         </button>
         <button class="btn__save" [disabled]="!editForm.valid">Actualizar</button>
       </div>

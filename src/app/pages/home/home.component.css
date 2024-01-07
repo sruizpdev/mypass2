@@ -2,122 +2,53 @@
   display: block;
 }
 
-.general__container {
+.container {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
-@media screen and (min-width:380px) {
-  .general__container {
+@media screen and (min-width: 380px) {
+  .container {
     max-width: 380px;
     margin: 0 auto;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
+}
+.search-container {
+  position: relative;
+  margin: 10px;
+}
+
+.search-input {
+  border: 1px solid var(--gray);
+  padding: 15px 40px;
+  border-radius: 50px;
+  width: 100%;
+  font-size: 15px;
+}
+.search-input:focus{
+  outline: none;
+  border: 2px solid var(--green);
+}
+.lupa {
+  width: 25px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
 }
 
 .card {
-  width: 90%;
-  background: white;
-  border: 1px solid var(--olive);
+  background-color: white;
+  border: 1px solid var(--gray);
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 0px 5px 5px 5px;
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  height: 70px;
 }
-
-.card__header {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  height: 30px;
-  
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--olive)
-}
-
-.card__body {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.card__data {
-  padding-left: 10px;
-}
-
-.site {
-  text-align: center;
-   font-weight: bold;
-
-  color: var(--olive);
-
-}
-
-.card__buttons {
-
-  display: flex;
-  gap: 10px;
-  margin-bottom: 5px;
-
-
-
-}
-
-img {
-  width: 70px;
-  border-radius: 50%;
-  border: 1px solid var(--olive);
-}
-
-button {
-  width: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: white;
-  border-radius: 5px;
-}
-
-.btn__delete {
-  background: var(--blood);
-  border: 1px solid var(--blood);
-  cursor: pointer;
-}
-.btn__delete:hover {
-  background: var(--fluorescent);
-  border: 1px solid var(--fluorescent);
-}
-.btn__edit {
-  background: var(--olive);
-  border: 1px solid var(--olive);
-  cursor: pointer;
-}
-.btn__edit:hover {
-  background: var(--green);
-  border: 1px solid var(--green);
-}
-
-dt {
-   
-  font-weight: normal;
-  color: #34495e;
-}
-
-
-
-.username,
-.password,
-.notes {
-  font-weight: bold;
-  color: var(--olive);
-  margin-bottom: 10px;
-
+.site-txt {
+  font-size: 15px;
 }

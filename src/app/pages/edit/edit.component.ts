@@ -67,4 +67,16 @@ export class EditComponent {
     this.editForm.patchValue({ site: '', username: '', password: '' });
     console.log('borrado');
   }
+  delete() {
+    const res = confirm('¿Está seguro?');
+
+    if (res) {
+      this.userService
+        .delete(this.editForm.value.id!)
+        .then(() => {
+          console.log('Acción confirmada');
+        })
+        .catch((err) => console.log(err));
+    } 
+  }
 }

@@ -41,7 +41,7 @@ img {
   margin-bottom: 10px;
 
   color: white;
-  background-color: var(--blood);
+  background-color: red;
   width: 100%;
   border-radius: 5px;
   padding: 10px;
@@ -52,22 +52,23 @@ input[type="radio"] {
   appearance: none;
   width: 15px;
   height: 15px;
-  border: 1px solid var(--stone);
+  border: 1px solid var(--gray);
   border-radius: 50%;
   background-clip: content-box;
   padding: 1px;
 }
 
 input[type="radio"]:checked {
-  background-color: var(--olive);
+  background-color: var(--green);
 
 }
 
 .card {
   width: 90%;
-  border: 1px solid var(--olive);
+  border: 1px solid var(--gray);
   border-radius: 5px;
   padding: 10px;
+  background-color: white;
 }
 
 .radio__container {
@@ -85,7 +86,7 @@ input[type="radio"]:checked {
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--olive);
+  border: 1px solid var(--gray);
   border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -93,17 +94,10 @@ input[type="radio"]:checked {
 
 .input__form:focus {
   outline: none;
-  border: 2px solid var(--olive);
+  border: 2px solid var(--green);
 }
 
-.page__name {
-  height: 35px;
-  text-align: center;
 
-  border-bottom: 1px solid var(--olive);
-  margin-bottom: 20px;
-
-}
 
 .buttons__container {
   display: flex;
@@ -119,22 +113,24 @@ button {
 }
 
 .btn__cancel {
-  background: var(--olive);
-  border: 1px solid var(--olive);
+  background-color: var(--green);
+  border: none;
 }
 
 .btn__cancel:hover {
-  background: var(--green);
-  border: 1px solid var(--green);
+  background-color: red;
+  border: none;
+  cursor: pointer;
 }
 
 .btn__save {
-  background: var(--blue);
-  border: 1px solid var(--blue);
+  background-color: var(--green);
+  border: none;
 }
 
 
 .btn__save:hover {
-  background: var(--sky);
-  border: 1px solid var(--sky);
+  background-color: var(--light-green);
+  border: none;
+  cursor: pointer;
 }
